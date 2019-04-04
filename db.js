@@ -21,12 +21,12 @@ function getAll() {
     
 // }
 
-function randomGenerator(manaType, cost){
+function randomGenerator(mana_id, type, cost){
     return db('cardInfo')
     .from('cardInfo')
-    .where()
-    .rand();
-
+    .where('cardInfo.mana_id', mana_id)
+    .where('cardInfo.cost', cost)
+    .rand('cardInfo.type', type);
 }
 
 module.exports = {
