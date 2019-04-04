@@ -3,7 +3,7 @@ exports.up = function(knex, Promise) {
         table.increments('id').primary
         table.string('type')
         table.string('cost')
-        table.string('url') 
+        table.string('url') .notNullable();
     })
   };
   
