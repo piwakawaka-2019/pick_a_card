@@ -21,7 +21,19 @@ router.get('/list/:id', (req,res)=>{
 
 router.get('/cards/:id', (req,res)=>{
   knex('mana')
-  .join('cardInfo', 'mana')
+  // .join('cardInfo', 'mana')
+  .then(function(mana){
+    console.log(mana)
+    res.render('cards',{mana: mana})
+  })
+})
+
+router.get('/cardProfile/:id', (req,res)=>{
+  knex('mana')
+  .then(function(mana){
+    console.log(mana)
+    res.render('cardProfile', {mana: mana})
+  })
 })
 
 module.exports = router
