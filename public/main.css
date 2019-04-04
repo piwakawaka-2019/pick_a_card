@@ -4,7 +4,7 @@ h1 {
   font-family: 'Lancelot';, serif;
   font-size: 56px;
   font-weight: bold;
-  border-radius: 0px 8px 0px 8px
+  border-radius: 0px 8px 0px 8px;
   border-size: 2px;
   border-style: inset;
 }
@@ -13,7 +13,7 @@ h2 {
   font-family: 'Lancelot';, serif;
   font-size: 48px;
   font-weight: bold;
-  border-radius: 0px 6px 0px 6px
+  border-radius: 0px 6px 0px 6px;
   border-size: 2px;
   border-style: inset;
 }
