@@ -31,9 +31,11 @@ router.get('/cards/:id', (req,res)=>{
 router.get('/cardProfile/:id', (req,res)=>{
   knex('mana')
   .then(function(mana){
-    console.log(mana)
+    // console.log(mana)
     res.render('cardProfile', {mana: mana})
   })
 })
+
+router.get('/card')
 
 module.exports = router
