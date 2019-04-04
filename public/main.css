@@ -1,5 +1,7 @@
 body {
-  background: #806040;
+  background-color: #806040;
+  background-image: url("/img/wood.jpg");
+  background-repeat: repeat;
 }
 
 a {
