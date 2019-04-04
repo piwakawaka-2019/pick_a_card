@@ -5,10 +5,10 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('mana').insert([
-        {id: 1, type: 'rowValue1', cost: '7-8'},
-        {id: 2, type: 'rowValue2', cost: '5-6'},
-        {id: 3, type: 'rowValue3', cost: '3-4'},
-        {id: 4, type: 'rowValue3', cost: '1-2'}
+        {id: 1, type: 'White Mana',cost: '7-8'},
+        {id: 2, type: 'Red Mana', cost: '5-6'},
+        {id: 3, type: 'Green Mana', cost: '3-4'},
+        {id: 4, type: 'Black Mana', cost: '1-2'}
       ]);
     });
 };
