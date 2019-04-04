@@ -1,7 +1,5 @@
-<link href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Chela+One|Corben|EB+Garamond|Germania+One|Kumar+One|Lancelot|Macondo|MedievalSharp|Milonga|New+Rocker|Nova+Cut|UnifrakturCook:700|UnifrakturMaguntia" rel="stylesheet">
-
 h1 {
-  font-family: 'Lancelot';, serif;
+  font-family: 'Lancelot', serif;
   font-size: 56px;
   font-weight: bold;
   border-radius: 0px 8px 0px 8px;
@@ -32,7 +30,7 @@ h4 {
 }
 
 h5 {
-  font-family: 'Lancelot';, serif;
+  font-family: 'Lancelot'; serif;
   font-size: 24px;
   text-align: left;
 }
