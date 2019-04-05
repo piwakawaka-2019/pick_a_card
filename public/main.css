@@ -148,7 +148,9 @@ p {
   text-align: left;
 }
 
+
 .imgmain {
+
   border: 5px;
   border-style: inset;
   border-radius: 6px;
@@ -159,3 +161,5 @@ p {
   margin-bottom: auto;
   max-width: 95%;
 }
+
+
