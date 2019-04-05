@@ -107,7 +107,6 @@ ol {
   border: 1px;
   border-style: outset;
   border-radius: 24px;
-  font-family: ;
   margin: 16px 8px 16px 8px;
   padding: 16px;
   list-style-position: inside;
@@ -120,7 +119,6 @@ ul {
   border: 1px;
   border-style: outset;
   border-radius: 24px;
-  font-family: ;
   margin: 16px 8px 16px 8px;
   padding: 16px;
   list-style-position: inside;
@@ -151,7 +149,7 @@ p {
 }
 
 .imgmain {
-  align: middle;
+  /* position-align: middle; */
   border: 5px;
   border-style: inset;
   border-radius: 6px;
