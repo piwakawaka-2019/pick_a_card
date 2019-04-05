@@ -5,6 +5,7 @@ exports.up = function (knex, Promise) {
     table.string('cost')
     table.string('type')
     table.integer('mana_id')
+    table.string('url')
   })
 };
 
