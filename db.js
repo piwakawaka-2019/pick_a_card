@@ -5,6 +5,19 @@ function getAll (db = database) {
   return db('cardInfo').select()
 }
 
+function addCards(newCard,db = database) {
+  return db('cardInfo')
+    .insert(newCard)
+    .then()
+}
+
+function deleteCard (id, db = database) {
+  console.log(id)
+  return db('cardInfo')
+    .where('id',id)
+    .delete()
+}
+
 // function wombleChars (wombleID, db = database) {
 //   return db('wombles')
 //      .join(`characteristics`, 'characteristic_id', '=', 'characteristics.id')
@@ -29,20 +42,10 @@ function getAll (db = database) {
 //     .select()
 // }
 
-// function addWomble(newWomble,db = database) {
-//   return db('wombles')
-//     .insert(newWomble)
-// }
-
 // function close (db = database) {
 //   db.destroy()
 // }
 
-// function deleteWomble (wombleID, db = database) {
-//   return db('wombles')
-//     .where({id:wombleID})
-//     .del()
-// }
 
 module.exports = {
   getAll,
@@ -51,6 +54,6 @@ module.exports = {
 //   wombleAssignments,
 //   getCharacteristics,
 //   getRubbish,
-//   addWomble,
-//   deleteWomble
+  addCards,
+  deleteCard
 }
