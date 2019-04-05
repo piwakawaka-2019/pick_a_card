@@ -2,6 +2,8 @@ const express = require('express')
 const development = require('./knexfile').development
 const knex = require('knex')(development)
 const router = express.Router()
+const dbFunctions = require('./db')
+
 
 router.get('/', (req, res) => {
   knex('mana')
@@ -45,12 +47,13 @@ router.get('/cards/:id', (req, res) => {
 })
 
 
-router.get( (req, res) => {
-  knex('cardInfo')
-   .select('cost')
-   .orderByRaw('cardInfo.type.RAND()')
-})
+router.get('/randomcard/', (req, res) => {
+    dbFunctions.randomGenerator().then(card => {
+        console.log(card)
+        res.render('cardProfile', {card: card})
+    })
 
+})
 
 
 module.exports = router
