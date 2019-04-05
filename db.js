@@ -1,4 +1,5 @@
 const config = require('./knexfile').development
+<<<<<<< HEAD
 const database = require('knex')(config)
 
 function getAll (db = database) {
@@ -57,3 +58,21 @@ module.exports = {
   addCards,
   deleteCard
 }
+=======
+const db = require('knex')(config)
+
+
+function randomGenerator(){
+    return db('cardInfo').then(cards => {
+        let randomIndex = Math.floor(Math.random() * cards.length)
+        return cards[randomIndex]
+    })
+
+    // item_id = 'cardInfo'.id
+    // item = item_id[Math.floor(Math.random()*'cardInfo'.length)];
+}
+
+module.exports = {
+  randomGenerator
+}
+>>>>>>> a7ea2a8c41a3d38823aca5668fd9a854e1b22563

@@ -2,6 +2,8 @@ const express = require('express')
 const development = require('./knexfile').development
 const knex = require('knex')(development)
 const router = express.Router()
+const dbFunctions = require('./db')
+
 
 const dbFunctions = require('./db')
 
@@ -41,7 +43,9 @@ router.get('/mana/:id/cards/withcost/:cost', (req, res) => {
 })
 
 
+
 router.get('/cards/:id', (req,res)=>{
+
   let id = req.params.id
 
   knex('cardInfo')
@@ -80,6 +84,7 @@ router.get("/cards", (req,res) => {
   })
 })
 
+
 router.get("/deleteCard/:id", (req,res) => {
   let id = req.params.id
   dbFunctions.deleteCard(id)
@@ -116,7 +121,16 @@ router.get('/cards/:id', (res,req) => {
     console.error('something went wrong: ' + error.message);
     res.send('Something went wrong: ' + error.message);
   })
-})
 
+
+router.get('/randomcard/', (req, res) => {
+    dbFunctions.randomGenerator().then(card => {
+        console.log(card)
+        res.render('cardProfile', {card: card})
+    })
+
+
+})
+})
 
 module.exports = router
