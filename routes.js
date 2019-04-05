@@ -5,8 +5,6 @@ const router = express.Router()
 const dbFunctions = require('./db')
 
 
-const dbFunctions = require('./db')
-
 router.get('/', (req, res) => {
   knex('mana')
     .then(function (mana) {
@@ -59,6 +57,14 @@ router.get('/cards/:id', (req,res)=>{
     console.error('something went wrong: ' + error.message);
     res.send('Something went wrong: ' + error.message);
   })
+})
+
+router.get('/randomcard', (req, res) => {
+  dbFunctions.randomGenerator().then(card => {
+      res.render('cardProfile', {card: card})
+  })
+
+
 })
 
 router.get("/addCard", (req,res) => {
@@ -123,14 +129,13 @@ router.get('/cards/:id', (res,req) => {
   })
 
 
-router.get('/randomcard/', (req, res) => {
-    dbFunctions.randomGenerator().then(card => {
-        console.log(card)
-        res.render('cardProfile', {card: card})
-    })
+// router.get('/randomcard', (req, res) => {
+//     dbFunctions.randomGenerator().then(card => {
+//         res.render('cardProfile', {card: card})
+//     })
 
 
-})
+// })
 })
 
 module.exports = router
