@@ -102,18 +102,6 @@ h6 {
   text-align: left;
 }
 
-ol {
-  background: tan;
-  border: 1px;
-  border-style: outset;
-  border-radius: 24px;
-  margin: 16px 8px 16px 8px;
-  padding: 16px;
-  list-style-position: inside;
-  font-family: 'Lancelot', serif;
-  font-size: 20px;
-}
-
 ul {
   background: tan;
   border: 1px;
@@ -122,8 +110,9 @@ ul {
   margin: 16px 8px 16px 8px;
   padding: 16px;
   list-style-position: inside;
+  list-style-type: none;
   font-family: 'Lancelot', serif;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 p {
@@ -160,5 +149,4 @@ p {
   margin-top: auto;
   margin-bottom: auto;
   max-width: 95%;
-
 }
