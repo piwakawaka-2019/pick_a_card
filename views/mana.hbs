@@ -1,8 +1,9 @@
 <img src="img/download.jpeg" class=imgmain><br>
 <h1>Pick your poison:</h1>
 
-<ol>{{#each mana}}
+<ul>{{#each mana}}
     <li><a href="./mana/{{id}}/costs">{{type}}</a><img src="{{url}}" /></a></li>
-
     {{/each}}
-</ol>
+</ul>
+<button><a href="/randomcard">Randomiser</a></button>
+
