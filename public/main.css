@@ -149,6 +149,8 @@ p {
 }
 
 .imgmain {
+  border: 2px;
+  border-style: ridge;
   border: 5px;
   border-style: inset;
   border-radius: 6px;
@@ -158,4 +160,5 @@ p {
   margin-top: auto;
   margin-bottom: auto;
   max-width: 95%;
+
 }
