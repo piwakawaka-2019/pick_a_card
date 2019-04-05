@@ -11,9 +11,14 @@ test('Check test file works', () => {
 })
 
 /*
-test('Check if...', done => {
-
-    done()
+test('Check card displays', done => {
+    request(server)
+    .get('/cards/1')
+    .end((err.res) => {
+        expect(err.toBeFalsy();
+        const expected = ;
+        done();
+    })
 })
 */
 
